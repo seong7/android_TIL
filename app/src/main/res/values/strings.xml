@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">android_view_basic</string>
+    <string name="strBtn1">버튼입니다</string>
+    <string name="naverBtn">네이버로 이동</string>
+</resources>

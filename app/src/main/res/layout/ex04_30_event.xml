@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            >
+
+            <ImageButton
+                android:id="@+id/naverBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:text="@string/naverBtn"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/naver_green"
+                />
+
+            <Button
+                android:id="@+id/callBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="call"
+                android:textColor="#ffffff"
+                android:background="#33ACE8"
+                android:layout_marginBottom="10dp"
+
+                />
+
+            <Button
+                android:id="@+id/galleryBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="galleryBtn"
+                android:textColor="#ffffff"
+                android:background="#E8BC33"
+                android:layout_marginBottom="10dp"
+                />
+
+            <Button
+                android:id="@+id/colorChangeBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="색 변경"
+                android:textColor="#ffffff"
+                android:background="#FF4C38"
+                android:layout_marginBottom="10dp"
+                />
+
+            <Button
+                android:id="@+id/finishBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="종료"
+                android:textColor="#ffffff"
+                android:background="#FF4C38"
+                android:layout_marginBottom="10dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
