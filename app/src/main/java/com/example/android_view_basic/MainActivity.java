@@ -15,12 +15,12 @@ public class MainActivity extends AppCompatActivity {
 
     CheckBox check1;
     ImageButton imgBtn;
-    Button callBtn, galleryBtn, colorChangeBtn, finishBtn, calcBtn, calcBtn2;
+    Button callBtn, galleryBtn, colorChangeBtn, finishBtn, calcBtn, calcBtn2, practiceBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_main2);
 //        setContentView(R.layout.ex04_14_rotate);
 //        button1 = (Button) findViewById(R.id.testBtn);
 //        check1 = (CheckBox) findViewById(R.id.testCheck);
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //
-        setContentView(R.layout.ex04_30_event);
+        setContentView(R.layout.activity_main);
 
         imgBtn = findViewById(R.id.naverBtn);
         callBtn = findViewById(R.id.callBtn);
@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         finishBtn = findViewById(R.id.finishBtn);
         calcBtn = findViewById(R.id.calcBtn);
         calcBtn2 = findViewById(R.id.calcBtn2);
+        practiceBtn = findViewById(R.id.practiceBtn);
 
 
 
@@ -114,6 +115,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent mIntent = new Intent(getApplicationContext(), Calculator.class);
+                startActivity(mIntent);
+            }
+        });
+
+
+        practiceBtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getApplicationContext(), basic_practice.class);
                 startActivity(mIntent);
             }
         });

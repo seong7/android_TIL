@@ -18,20 +18,39 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:paddingLeft="10dp">
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp">
 
             <TextView
-                android:id="@+id/resultText"
-                android:layout_width="fill_parent"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
+                android:id="@+id/expression"
+                android:layout_width="279dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-light"
+                android:text=""
+                android:textAlignment="textEnd"
+                android:textColor="#888888"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/current_result"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text=""
                 android:textSize="50sp" />
@@ -45,28 +64,39 @@
                 android:rowCount="5">
 
                 <Button
-                    android:id="@+id/BtnDel"
-                    android:layout_width="65dp"
+                    android:id="@+id/BtnRmd"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="0"
                     android:layout_column="3"
                     android:layout_margin="0dp"
                     android:height="80dp"
-                    android:text="Del" />
+                    android:text="나머지" />
+
 
                 <Button
                     android:id="@+id/BtnInit"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="0"
-                    android:layout_column="2"
+                    android:layout_column="0"
                     android:layout_margin="0dp"
                     android:height="80dp"
                     android:text="CE" />
 
                 <Button
+                    android:id="@+id/BtnDel"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:layout_margin="0dp"
+                    android:height="80dp"
+                    android:text="Del" />
+
+                <Button
                     android:id="@+id/Btn7"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="1"
                     android:layout_column="0"
@@ -76,7 +106,7 @@
 
                 <Button
                     android:id="@+id/Btn8"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="1"
                     android:layout_column="1"
@@ -86,7 +116,7 @@
 
                 <Button
                     android:id="@+id/Btn9"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="1"
                     android:layout_column="2"
@@ -96,7 +126,7 @@
 
                 <Button
                     android:id="@+id/BtnAdd"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="1"
                     android:layout_column="3"
@@ -106,7 +136,7 @@
 
                 <Button
                     android:id="@+id/Btn4"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="2"
                     android:layout_column="0"
@@ -116,7 +146,7 @@
 
                 <Button
                     android:id="@+id/Btn5"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="2"
                     android:layout_column="1"
@@ -126,7 +156,7 @@
 
                 <Button
                     android:id="@+id/Btn6"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="2"
                     android:layout_column="2"
@@ -136,7 +166,7 @@
 
                 <Button
                     android:id="@+id/BtnSub"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="2"
                     android:layout_column="3"
@@ -146,7 +176,7 @@
 
                 <Button
                     android:id="@+id/Btn1"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="3"
                     android:layout_column="0"
@@ -156,7 +186,7 @@
 
                 <Button
                     android:id="@+id/Btn2"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="3"
                     android:layout_column="1"
@@ -166,7 +196,7 @@
 
                 <Button
                     android:id="@+id/Btn3"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="3"
                     android:layout_column="2"
@@ -176,7 +206,7 @@
 
                 <Button
                     android:id="@+id/BtnMul"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="3"
                     android:layout_column="3"
@@ -186,7 +216,7 @@
 
                 <Button
                     android:id="@+id/BtnResult"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="4"
                     android:layout_column="2"
@@ -196,7 +226,7 @@
 
                 <Button
                     android:id="@+id/Btn0"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="4"
                     android:layout_column="1"
@@ -206,7 +236,7 @@
 
                 <Button
                     android:id="@+id/BtnDot"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="4"
                     android:layout_column="0"
@@ -216,7 +246,7 @@
 
                 <Button
                     android:id="@+id/BtnDiv"
-                    android:layout_width="65dp"
+                    android:layout_width="70dp"
                     android:layout_height="65dp"
                     android:layout_row="4"
                     android:layout_column="3"
@@ -225,14 +255,12 @@
                     android:text="/" />
 
 
-
             </GridLayout>
 
         </LinearLayout>
 
 
     </ScrollView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
