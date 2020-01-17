@@ -15,10 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     CheckBox check1;
     ImageButton imgBtn;
-    Button callBtn;
-    Button galleryBtn;
-    Button colorChangeBtn;
-    Button finishBtn;
+    Button callBtn, galleryBtn, colorChangeBtn, finishBtn, calcBtn, calcBtn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
         galleryBtn = findViewById(R.id.galleryBtn);
         colorChangeBtn = findViewById(R.id.colorChangeBtn);
         finishBtn = findViewById(R.id.finishBtn);
+        calcBtn = findViewById(R.id.calcBtn);
+        calcBtn2 = findViewById(R.id.calcBtn2);
+
 
 
         // brower 로 uri 열기
@@ -91,10 +91,30 @@ public class MainActivity extends AppCompatActivity {
                     colorChangeBtn.setBackgroundColor(Color.rgb(254, 192, 84));
                     flag = 1;
                 }else{
-                    colorChangeBtn.setBackgroundColor(Color.rgb(254, 76, 56));
+                    colorChangeBtn.setBackgroundColor(Color.rgb(93, 232, 81));
                     flag = 0;
                 }
 
+            }
+        });
+
+        // simple 계산기 열기
+        calcBtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getApplicationContext(), SimpleCalculator.class);
+                startActivity(mIntent);
+            }
+        });
+
+        // 나의 계산기 열기
+        calcBtn2.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getApplicationContext(), Calculator.class);
+                startActivity(mIntent);
             }
         });
 
