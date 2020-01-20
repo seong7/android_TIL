@@ -14,8 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     CheckBox check1;
-    ImageButton imgBtn;
-    String [] btnName = {"callBtn", "galleryBtn", "colorChangeBtn", "finishBtn", "calcBtn", "calcBtn2", "practiceBtn", "layoutBtn"};
+    String [] btnName = {"callBtn", "galleryBtn", "colorChangeBtn", "finishBtn", "calcBtn", "calcBtn2", "practiceBtn", "layoutBtn", "byJava", "naverBtn"};
     Button [] btns = new Button[btnName.length];
 
 
@@ -46,21 +45,10 @@ public class MainActivity extends AppCompatActivity {
 //
         setContentView(R.layout.activity_main);
 
-        imgBtn = findViewById(R.id.naverBtn);
-
         for(int i=0; i<btns.length; i++){                                                                   // 동적으로 버튼 객체 생성
             btns[i] = findViewById(getResources().getIdentifier(btnName[i], "id", getPackageName()));
             btns[i].setBackgroundColor(MyColor.randomColor());                                              // 버튼 색상 랜덤하게 설정
         }
-
-        // browser 로 uri 열기
-        imgBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.naver.com"));
-                startActivity(mIntent);
-            }
-        });
 
         // 전화 걸기
         btns[0].setOnClickListener(new View.OnClickListener(){
@@ -141,6 +129,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent mIntent = new Intent(getApplicationContext(), ex05_layout.class);
+                startActivity(mIntent);
+            }
+        });
+
+        // Java로 구현한 layout 열기
+        btns[8].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getApplicationContext(), java_layout.class);
+                startActivity(mIntent);
+            }
+        });
+
+        // browser 로 uri 열기
+        btns[9].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.naver.com"));
                 startActivity(mIntent);
             }
         });

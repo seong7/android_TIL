@@ -16,7 +16,8 @@ public class ex05_layout extends AppCompatActivity {
 //        setContentView(R.layout.ex05_10_table_weight);
 
 //        setContentView(R.layout.ex05_11_table_margin);
-        setContentView(R.layout.ex05_12_grid);
+//        setContentView(R.layout.ex05_12_grid);
+        setContentView(R.layout.ex05_practice2);
 
 
     }

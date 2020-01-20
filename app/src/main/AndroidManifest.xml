@@ -13,6 +13,7 @@
         <activity android:name=".Calculator" />
         <activity android:name=".SimpleCalculator" />
         <activity android:name=".ex05_layout"/>
+        <activity android:name=".java_layout"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
