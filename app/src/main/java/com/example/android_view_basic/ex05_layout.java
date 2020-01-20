@@ -10,6 +10,14 @@ public class ex05_layout extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.ex05_01);
+        //setContentView(R.layout.ex05_05_overlap_weight);
+        //setContentView(R.layout.ex05_07_relative);
+        //setContentView(R.layout.ex05_05_overlap_weight);
+//        setContentView(R.layout.ex05_10_table_weight);
+
+//        setContentView(R.layout.ex05_11_table_margin);
+        setContentView(R.layout.ex05_12_grid);
+
+
     }
 }
