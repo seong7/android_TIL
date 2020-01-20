@@ -15,7 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     CheckBox check1;
     ImageButton imgBtn;
-    Button callBtn, galleryBtn, colorChangeBtn, finishBtn, calcBtn, calcBtn2, practiceBtn;
+    String [] btnName = {"callBtn", "galleryBtn", "colorChangeBtn", "finishBtn", "calcBtn", "calcBtn2", "practiceBtn", "layoutBtn"};
+    Button [] btns = new Button[btnName.length];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 //
 //            @Override
 //            public void onClick(View view){
-//                // Toast : 글
+//                // Toast : 메세지 생성하는 클래스
 //                Toast.makeText(getApplicationContext(), "버튼을 눌렀음", Toast.LENGTH_SHORT).show();
 //            }
 //        });
@@ -45,17 +47,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imgBtn = findViewById(R.id.naverBtn);
-        callBtn = findViewById(R.id.callBtn);
-        galleryBtn = findViewById(R.id.galleryBtn);
-        colorChangeBtn = findViewById(R.id.colorChangeBtn);
-        finishBtn = findViewById(R.id.finishBtn);
-        calcBtn = findViewById(R.id.calcBtn);
-        calcBtn2 = findViewById(R.id.calcBtn2);
-        practiceBtn = findViewById(R.id.practiceBtn);
 
+        for(int i=0; i<btns.length; i++){                                                                   // 동적으로 버튼 객체 생성
+            btns[i] = findViewById(getResources().getIdentifier(btnName[i], "id", getPackageName()));
+            btns[i].setBackgroundColor(MyColor.randomColor());                                              // 버튼 색상 랜덤하게 설정
+        }
 
-
-        // brower 로 uri 열기
+        // browser 로 uri 열기
         imgBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -65,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // 전화 걸기
-        callBtn.setOnClickListener(new View.OnClickListener(){
+        btns[0].setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:/01022076852"));
@@ -74,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // 갤러리 열기
-        galleryBtn.setOnClickListener(new View.OnClickListener(){
+        btns[1].setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("content://media/internal/images/media"));
@@ -83,24 +81,33 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // 버튼 색상 변경
-        colorChangeBtn.setOnClickListener(new View.OnClickListener(){
+        btns[2].setOnClickListener(new View.OnClickListener(){
             int flag = 0;
 
             @Override
             public void onClick(View v) {
                 if(flag == 0){
-                    colorChangeBtn.setBackgroundColor(Color.rgb(254, 192, 84));
+                    btns[2].setBackgroundColor(Color.rgb(254, 192, 84));
                     flag = 1;
                 }else{
-                    colorChangeBtn.setBackgroundColor(Color.rgb(93, 232, 81));
+                    btns[2].setBackgroundColor(Color.rgb(93, 232, 81));
                     flag = 0;
                 }
 
             }
         });
 
+        // 앱 종료
+        btns[3].setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         // simple 계산기 열기
-        calcBtn.setOnClickListener(new View.OnClickListener(){
+        btns[4].setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
@@ -110,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // 나의 계산기 열기
-        calcBtn2.setOnClickListener(new View.OnClickListener(){
+        btns[5].setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
@@ -119,8 +126,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        practiceBtn.setOnClickListener(new View.OnClickListener(){
+        // basic 연습
+        btns[6].setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
@@ -129,24 +136,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        // 앱 종료
-        finishBtn.setOnClickListener(new View.OnClickListener() {
-
+        // layout 연습
+        btns[7].setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                finish();
+                Intent mIntent = new Intent(getApplicationContext(), ex05_layout.class);
+                startActivity(mIntent);
             }
         });
-
-
-
-
-
-
-
-
-
 
     }
 }
