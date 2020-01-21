@@ -130,9 +130,45 @@
                 android:layout_rowWeight="1"/>
 
             <Button
-                android:id="@+id/finishBtn"
+                android:id="@+id/calcBtn3"
                 android:layout_row="3"
                 android:layout_column="0"
+                android:layout_margin="10dp"
+                android:background="#FF7E2B"
+                android:text="심플 계산기 _ 선생님"
+                android:textColor="#ffffff"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Button
+                android:id="@+id/ex06_widget"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_margin="10dp"
+                android:background="#FF7E2B"
+                android:text="위젯 연습"
+                android:textColor="#ffffff"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Button
+                android:id="@+id/ex06_reservation"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_margin="10dp"
+                android:background="#FF7E2B"
+                android:text="예약하기 연습"
+                android:textColor="#ffffff"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"/>
+
+            <Button
+                android:id="@+id/finishBtn"
+                android:layout_row="3"
+                android:layout_column="2"
                 android:layout_margin="10dp"
                 android:background="#FF4C38"
                 android:text="종료"

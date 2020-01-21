@@ -7,14 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     CheckBox check1;
-    String [] btnName = {"callBtn", "galleryBtn", "colorChangeBtn", "finishBtn", "calcBtn", "calcBtn2", "practiceBtn", "layoutBtn", "byJava", "naverBtn"};
+    String [] btnName = {"callBtn", "galleryBtn", "colorChangeBtn", "finishBtn", "calcBtn", "calcBtn2", "practiceBtn", "layoutBtn", "byJava", "naverBtn", "calcBtn3", "ex06_widget", "ex06_reservation"};
     Button [] btns = new Button[btnName.length];
 
 
@@ -128,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         btns[7].setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent mIntent = new Intent(getApplicationContext(), ex05_layout.class);
+                Intent mIntent = new Intent(getApplicationContext(), Ex05_layout.class);
                 startActivity(mIntent);
             }
         });
@@ -137,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
         btns[8].setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent mIntent = new Intent(getApplicationContext(), java_layout.class);
+                Intent mIntent = new Intent(getApplicationContext(), Java_layout.class);
                 startActivity(mIntent);
             }
         });
@@ -147,6 +146,34 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.naver.com"));
+                startActivity(mIntent);
+            }
+        });
+
+        // 선생님 계산기 열기
+        btns[10].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getApplicationContext(), SimpleCalculator_teacher.class);
+                startActivity(mIntent);
+            }
+        });
+
+        // ex06 위젯 연습 열기
+        btns[11].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getApplicationContext(), Ex06_widget.class);
+                startActivity(mIntent);
+            }
+        });
+
+
+        // ex06 예약하기 연습 열기
+        btns[12].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getApplicationContext(), Ex06_reservation.class);
                 startActivity(mIntent);
             }
         });

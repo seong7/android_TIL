@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class java_layout extends AppCompatActivity {
+public class Java_layout extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +26,7 @@ public class java_layout extends AppCompatActivity {
 
         setContentView(baseLayout, params);                 // Layout + width / height 설정
 
-        Button btn = new Button(java_layout.this);
+        Button btn = new Button(Java_layout.this);
 
         btn.setText("버튼입니다");
         btn.setBackgroundColor(MyColor.randomColor());

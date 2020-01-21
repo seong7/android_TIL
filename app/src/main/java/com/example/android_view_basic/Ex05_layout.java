@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ex05_layout extends AppCompatActivity {
+public class Ex05_layout extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
