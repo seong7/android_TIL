@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     CheckBox check1;
-    String [] btnName = {"callBtn", "galleryBtn", "colorChangeBtn", "finishBtn", "calcBtn", "calcBtn2", "practiceBtn", "layoutBtn", "byJava", "naverBtn", "calcBtn3", "ex06_widget", "ex06_reservation"};
+    String [] btnName = {"callBtn", "galleryBtn", "colorChangeBtn", "finishBtn", "calcBtn", "calcBtn2", "practiceBtn", "layoutBtn", "byJava", "naverBtn", "calcBtn3", "ex06_widget", "ex06_reservation", "sqlite"};
     Button [] btns = new Button[btnName.length];
 
 
@@ -178,6 +178,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // sqlite 연습 열기
+        btns[13].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getApplicationContext(), sqlite_layout.class);
+                startActivity(mIntent);
+            }
+        });
     }
 }
 
