@@ -17,7 +17,10 @@
         <activity android:name=".Java_layout" />
         <activity android:name=".SimpleCalculator_teacher" />
         <activity android:name=".Ex06_widget" />
-        <activity android:name=".sqlite_layout" />
+        <activity android:name=".Sqlite" />
+        <activity android:name=".Bars" />
+        <activity android:name=".Thread_example" />
+        <activity android:name=".Thread_example2" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

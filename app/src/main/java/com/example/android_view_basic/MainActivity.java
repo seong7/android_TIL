@@ -13,7 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     CheckBox check1;
-    String [] btnName = {"callBtn", "galleryBtn", "colorChangeBtn", "finishBtn", "calcBtn", "calcBtn2", "practiceBtn", "layoutBtn", "byJava", "naverBtn", "calcBtn3", "ex06_widget", "ex06_reservation", "sqlite"};
+    String [] btnName = {"callBtn", "galleryBtn", "colorChangeBtn", "finishBtn", "calcBtn", "calcBtn2",
+            "practiceBtn", "layoutBtn", "byJava", "naverBtn", "calcBtn3", "ex06_widget", "ex06_reservation",
+            "sqlite", "bars", "thread_example", "thread_example2"};
     Button [] btns = new Button[btnName.length];
 
 
@@ -182,10 +184,39 @@ public class MainActivity extends AppCompatActivity {
         btns[13].setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent mIntent = new Intent(getApplicationContext(), sqlite_layout.class);
+                Intent mIntent = new Intent(getApplicationContext(), Sqlite.class);
                 startActivity(mIntent);
             }
         });
+
+        // thread 열기
+        btns[14].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getApplicationContext(), Bars.class);
+                startActivity(mIntent);
+            }
+        });
+
+        // thread_example1 (동작안함) 열기
+        btns[15].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getApplicationContext(), Thread_example.class);
+                startActivity(mIntent);
+            }
+        });
+
+        // thread_example2 (동작함) 열기
+        btns[16].setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getApplicationContext(), Thread_example2.class);
+                startActivity(mIntent);
+            }
+        });
+
+
     }
 }
 

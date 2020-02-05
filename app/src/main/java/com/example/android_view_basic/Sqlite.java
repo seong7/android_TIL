@@ -14,7 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class sqlite_layout extends AppCompatActivity {
+public class Sqlite extends AppCompatActivity {
 
     myDBHelper myHelper;
     EditText edtName, edtNumber, edtNameResult, edtNumberResult;
